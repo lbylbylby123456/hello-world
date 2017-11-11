@@ -1,0 +1,72 @@
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>  
+ int main (){
+ 	int a,i;
+	float b;
+ 	scanf ("%d",&a);
+ 	for (i=2;i<a;i++)
+ 	{
+ 	b=a % i;
+ 	if(b==0) {
+	 break;
+	 }
+	 
+	}
+	int a1,b1,c1,d1,a2,b2,c2,d2;
+	a1=a/1000;
+	a2=a-1000*a1;
+	b1=a2/100;
+	b2=a2-100*b1;
+	c1=b2/10;
+	c2=b2-10*c1;
+	d1=c2;
+ int x1=a1+b1+c1+d1;
+ int x2=a1*b1*c1*d1;
+ int x3=a1*a1+b1*b1+c1*c1+d1*d1;
+ int j;
+ for ( j=2;j<x1;j++)
+ 	{
+  float c=x1 % j;
+ if  (c==0) {
+	 break;
+	 }
+	 
+	}
+	int m;
+	for ( m=2;m<x2;m++)
+ 	{
+ 	float d=x2 % m;
+ 	if (d==0) {
+	 break;
+	 }
+	 
+	}
+	int w;
+	for ( w=2;w<x3;w++)
+ 	{
+ 	float e=x3 % w;
+ 	if(e==0) {
+	 break;
+	 }
+	 
+	}
+ 
+	
+	 if ((i==a)&&(j==x1)&&(m==x2)&&(w==x3))
+	 printf("%d是超级素数\n",a);
+	 else 
+	 printf("%d不是超级素数\n",a);
+	 
+ 
+	
+	//只能算1000到9999，因为比如几百会出现a1为0，m==x2，会出问题。
+	//int j m 之类的 必须写到for外面
+	// 还有要写float b c d e 
+	
+	 
+	 
+ 
+ return 0;
+ }
+ 
