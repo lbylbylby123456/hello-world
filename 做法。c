@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+int hexcmp(char*hex1, char*hex2){
+	int a;int b=0;	int c=0;
+	for(int i=5,base=1;i>1;i--){//打上一二hex1hex2 
+	
+        int hex1[i];
+		if (hex1[i]<'a')
+	     a=hex1[i]-48;
+		if(hex1[i]>='a')
+		 a=hex1[i]-87;
+	     
+		 b=b+a*base;
+		base=16*base;
+	}
+	for(int i=5,base=1;i>1;i--){
+
+        int hex2[i];
+		if (hex2[i]<'a')
+		int a=hex2[i]-48;
+		
+		if(hex2[i]>='a')//最好用else别忘是大于等于 
+		int a=hex2[i]-87;
+		c=c+a*base;
+		base=16*base;
+	}
+	if(b>c)
+	return 1;
+	if(b<c)
+	return -1;
+	else 
+	return 0;
+	
+}
+int main(){
+	char b[7];
+	char c[7];
+	scanf("%s",b);
+	scanf("%s",c);
+	printf("%d\n",hexcmp(b,c));
+}
