@@ -1,0 +1,33 @@
+#include<stdio.h>
+
+int main()
+
+{
+
+int a=0,b=0,c=0,num;     
+
+
+
+	for(a=1;a<=9;a++)
+
+		for (b=0;b<=9;b++)
+
+			for (c=0;c<=9;c++)	
+
+			if(a*a*a+b*b*b+c*c*c==a*100+b*10+c)
+
+			{    num=a*100+b*10+c;
+
+			printf("水仙花数字为:%d a=%d b=%d c=%d\n",num,a,b,c);
+
+			}
+
+
+
+
+
+
+
+return 0;
+
+}
