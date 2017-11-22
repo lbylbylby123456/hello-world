@@ -1,0 +1,36 @@
+#include <stdio.h>
+int main (){
+unsigned long c1,c5,c10,c100;
+unsigned long a;
+unsigned long ans=0;
+unsigned long tem;
+printf ("请输入一元纸的张数："); 
+scanf ("%lu",&c1);
+printf ("请输入五元纸的张数：") ;
+scanf ("%lu",&c5); 
+printf ("请输入十元的张数：");
+scanf ("%lu",&c10);
+printf ("请输入一百元的张数");
+scanf ("%lu",&c100);
+printf("请输入需要支付的金额:");
+scanf ("%lu",&a);
+
+tem =(a/100<c100)?a/100:c100 ;
+a=a-tem*100;
+ans=ans+tem;
+
+tem=(a/10<c10)?a/10:c10;
+a=a-tem*10;
+ans=ans+tem;
+
+tem=(a/5<c5)?a/5:c5;
+a=a-tem*5;
+ans=ans+tem;
+
+tem=a;
+ans=ans+tem;
+
+
+printf("最少需要%lu张\n",ans);
+return 0; 
+}
