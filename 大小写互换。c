@@ -1,0 +1,11 @@
+#include<stdio.h>
+ int main() 
+ { char a,b; 
+ scanf("%c",&a); 
+ 
+ if(a>='A'&&a<='Z') b=a+32; 
+ else if(a>='a'&&a<='z') b=a-32;
+   else //else要写在一起，要不然先写printf会使else没有先前的if 
+  printf("error") ;
+   printf("%c",b);
+   } 
