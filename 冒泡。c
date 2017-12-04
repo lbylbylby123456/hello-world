@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+int main(){
+	int n;
+	scanf ("%d",&n);
+	int a[n];
+	for(int i=0;i<n;i++){
+		scanf("%d",&a[i]);//别忘打& 
+	}
+	for (int j=0;j<n-1;j++){
+	  for(int k=0;k<n-1;k++){
+	  	if(a[k+1]<a[k]){
+	  		int b=a[k+1];
+	  		a[k+1]=a[k];
+	  		a[k]=b;
+		  }
+		  
+	  } for (int x=0;x<n;x++){
+		  	printf("%d ",a[x]);//把他打到k循环外面 
+		  }
+		  printf("\n");
+	 } 
+} 
