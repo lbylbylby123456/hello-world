@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <string.h>
+char a[503],b[503],d[503];
+char c[1003];
+int main(){
+	int t;
+	scanf("%s",&t);
+	while(t--)//如果是零跳出循环，如果不是零就减一
+	{
+	menset(c,0,sizeof(c));//计算对象所占的字节数 
+	  scanf("%s",a);//
+	  scanf("%s",b);
+	  int lena=strlen(a);//统计给定字符串的长度
+	  int lenb=strlen(b);
+	  for(int i=0;i<lena;i++)
+	  d[lena-i-1]=a[i]-'0';
+	  for(int i=0;i<lena;i++)
+	  a[i]=d[i];
+	  for(int i=0;i<lenb;i++)
+	  d[lenb-i-1]=b[i]-'0';
+	  for(int i=0;i<lenb;i++)
+	  b[i]=d[i];
+	  for(int i=0;i<lena;i++)
+	     for(int j=0;j<lenb;j++){
+	     	int now=i+j;
+		 }
+	   
+	
+	} 
+} 
