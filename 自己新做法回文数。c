@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+#include <string.h>
+int main()
+{
+    int n,m;
+    int sum=0;
+    scanf("%d",&n);
+    int p=n;
+    for(int i=0;;i++){
+		m=p%10;
+		p=p/10;//别写反多检查 
+    	sum=10*sum+m;
+       if(p==0)
+       break;
+	}if(sum==n)
+	printf("Yes");
+	else 
+	printf("No");
+	
+} 
