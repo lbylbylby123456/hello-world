@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+int main(){
+	unsigned long long a,b;
+	scanf("%d %d",&a,&b);
+	unsigned long long c;
+	c=a+b;
+	
+	printf("%d",c);
+	printf("\n");
+}
