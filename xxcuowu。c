@@ -1,0 +1,72 @@
+#include <stdio.h>
+#include <string.h>
+int main() {
+	int x,y,w,h;
+	scanf("%d%d%d%d",&x,&y,&w,&h);
+	int lens1=0,lens2=0,lens3=0,lens4=0,lens5=0,lens6=0;
+	char str1[2333],str2[2333],str3[2333],str4[2333],str5[2333],str6[2333];
+	if(x>9||x<1||y<1||y>6||w<1||w>9||h<1||h>6)
+	printf("Input Error\n");
+	
+	else
+	
+	{if(y==1)
+		 str1[2333]={"--**-**--"};
+		 while((str1[lens1++]=getchar())!='\n');
+	if(y==2)	
+		 str2[]={"-*--*--*-"};
+		 while((str2[lens2++]=getchar())!='\n');
+	if(y==3)	
+		 str3[]={"-*-----*-"};
+		 while((str3[lens3++]=getchar())!='\n');
+	if(y==4)	
+		 str4[]={"--*---*--"};
+		 while((str4[lens4++]=getchar())!='\n');
+	if(y==5)	
+		str5[]={"---*-*---"};
+		while((str5[lens5++]=getchar())!='\n');
+	if(y==6)	
+		 str6[]={"----*----"};
+		 while((str6[lens6++]=getchar())!='\n');
+		 lens1--, lens2--, lens3--, lens4--, lens5--, lens6--,
+	  for(int j=y;j<y+h;j++)
+	  {
+	  
+		if(j==1)
+		for(int i=x-1;i<x+w-1;i++)
+		{
+			printf("%s",str1[i]);
+		}
+		if(j==2)
+		for(int i=x-1;i<x+w-1;i++)
+		{
+			printf("%s",str2[i]);
+		}
+		if(j==3)
+		for(int i=x-1;i<x+w-1;i++)
+		{
+			printf("%s",str3[i]);
+		}
+		if(j==4)
+		for(int i=x-1;i<x+w-1;i++)
+		{
+			printf("%s",str4[i]);
+		}
+		if(j==5)
+		for(int i=x-1;i<x+w-1;i++)
+		{
+			printf("%s",str5[i]);
+		}
+		if(j==6)
+		for(int i=x-1;i<x+w-1;i++)
+		{
+			printf("%s",str6[i]);
+		}
+	}
+		
+	}
+	return 0;
+	
+}
+
+
