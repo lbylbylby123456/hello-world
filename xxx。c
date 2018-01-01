@@ -1,0 +1,105 @@
+#include <stdio.h>
+#include <math.h>
+#include <string.h>
+int main(){
+	int n;
+	scanf("%d",&n);
+	getchar();
+	
+	for(int i=0;i<n;i++)
+	{   char a[23333];
+	    int b[23333];
+	    int y[2333];
+	    int z[2333];
+	    
+	    int j1;
+	    for(j1=0;;j1++)
+	    {
+		scanf("%c",&a[j1]);
+	     y[j1]=a[j1]-'0';
+	     z[j1]=y[j1];
+		if(j1>=1&&y[j1]!=' '-'0'&&y[j1-1]!=' '-'0'&&y[j1]!='\n'-'0')
+		{
+		z[j1]=10*z[j1-1]+z[j1];
+		
+		z[j1-1]=' '-'0';
+		}
+		
+	    if(y[j1]=='\n'-'0')
+	    break;
+	    
+		}
+		//调试
+		/*
+		int i1=0;
+		for (; i1<j1; i1++)
+			printf("%d ", z[i1]);*/ 
+	        int len=j1;
+		   	int len2=0;
+		for(int j=0;j<len;j++)
+		{    if(z[j]!=' '-'0')
+		    {
+			b[len2]=z[j];
+			len2++;
+			
+			}	
+		}
+		
+	    
+	
+		int c[2333];
+		int d[2333];
+		int len3=0;
+	    int len4=0; 
+		for(int j=0;j<len2;j++)
+	    {    
+		     
+			if(b[j]%2!=0)
+			{
+				
+		    if(b[j]<=0) c[len3++]=b[j]+768;
+		else    c[len3++]=b[j];
+			} 
+			if(b[j]%2==0)
+			{
+				
+			if(b[j]<=0) d[len4++]=b[j]+768;
+		else	 d[len4++]=b[j];
+			 } 
+		}
+	
+		for(int k=0;k<len3-1;k++)
+		   for(int j=k+1;j<len3;j++)
+		{   
+		if (c[k]>c[j])
+		 {int tem;
+		 tem=c[k];
+		 c[k]=c[j];
+		 c[j]=tem;
+		 }
+			
+		}
+		for(int j=0;j<len3;j++)
+		{
+			printf("%d ",c[j]);
+		}
+		
+		for(int k=0;k<len4-1;k++)
+		   for(int j=k+1;j<len4;j++)
+		{int tem;
+		if (d[k]>d[j])
+		 {
+		 tem=d[k];
+		 d[k]=d[j];
+		 d[j]=tem;
+		 }
+			
+		}
+		for(int j=0;j<len4;j++)
+		{
+			printf("%d ",d[j]);
+		}
+		printf("\n");
+	
+        }
+} 
