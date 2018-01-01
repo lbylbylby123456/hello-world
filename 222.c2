@@ -1,0 +1,43 @@
+#include<stdio.h>	`
+
+int main()
+{
+	/*	
+	enum WeekdayType
+	{
+		MON=1,TUE,WED,THU,FRI,SAT,SUN
+	}W[100];
+	*/
+	int n,i,a[100];
+	scanf("%d",&n);
+	for(i=0;i<n;i++)
+	{
+		scanf("%d",&a[i]);
+	}
+	for(i=0;i<n;i++)
+	switch(a[i])
+	{
+		case 1:
+			puts("MON");
+			break;
+		case 2:
+			puts("TUE");
+			break;
+		case 3:
+			puts("WED");
+			break;
+		case 4:
+			puts("THU");
+			break;
+		case 5:
+			puts("FRI");
+			break;
+		case 6:
+			puts("SAT");
+			break;
+		case 7:
+			puts("SUN");
+			break;
+	}
+	return 0;
+}
